@@ -1,0 +1,5 @@
+rootProject.name = 'analysis-of-algorithms'
+include 'sorting'
+include 'utils'
+include 'union-find'
+

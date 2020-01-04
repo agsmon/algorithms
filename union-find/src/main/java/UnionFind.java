@@ -9,8 +9,8 @@ public class UnionFind {
 
     public UnionFind(int count) {
         this.count = count;
-        id = new int[count];
-        for (int i = 0; i < count; i++) {
+        id = new int[count + 1];
+        for (int i = 0; i < count + 1; i++) {
             id[i] = i;
         }
     }

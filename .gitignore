@@ -1,0 +1,12 @@
+# IntelliJ Idea
+*.iml
+.idea/
+out
+
+# Gradle Files
+.gradle/
+
+# Build output directies
+build/
+target/
+

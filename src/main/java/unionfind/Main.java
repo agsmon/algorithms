@@ -1,14 +1,10 @@
+package unionfind;
+
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Optional;
 import java.util.OptionalInt;
-import java.util.function.IntSupplier;
-import java.util.stream.Stream;
-
-import static java.util.Comparator.*;
 
 
 /**

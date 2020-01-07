@@ -1,14 +1,16 @@
+package sorting;
+
 import edu.princeton.cs.algs4.*;
 
 public class SortCompare {
     public static double time(String alg, Double[] a) {
         Stopwatch timer = new Stopwatch();
         switch (alg) {
-            case "Insertion":
+            case "sorting.Insertion":
                 Insertion.sort(a);
             case "Selection":
                 Selection.sort(a);
-            case "Shell":
+            case "sorting.Shell":
                 Shell.sort(a);
             case "Merge":
                 Merge.sort(a);

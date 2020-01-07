@@ -1,23 +1,22 @@
-subprojects {
-    group 'algorithms'
-    version '1.0-SNAPSHOT'
+plugins {
+    id 'java'
+}
 
-    apply plugin: 'java'
+group 'algorithms'
+version '1.0-SNAPSHOT'
 
-    java {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-    }
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+}
 
-    repositories {
-        mavenCentral()
-        maven {
-            url  "https://dl.bintray.com/algs4/maven"
-        }
-    }
-
-    dependencies {
-        implementation group: 'edu.princeton.cs', name: 'algs4', version: '1.0.4'
-        testImplementation group: 'junit', name: 'junit', version: '4.11'
+repositories {
+    mavenCentral()
+    maven {
+        url  "https://dl.bintray.com/algs4/maven"
     }
 }
 
+dependencies {
+    implementation group: 'edu.princeton.cs', name: 'algs4', version: '1.0.4'
+    testImplementation group: 'junit', name: 'junit', version: '4.11'
+}

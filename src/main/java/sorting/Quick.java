@@ -20,18 +20,18 @@ public class Quick {
 
     private static int partition(Comparable[] a, int lo, int hi) {
         // partition into a[lo, i-1], a[i], a[i+1, hi]
-        Comparable v = a[lo];
+        Comparable partitioningItem = a[lo];
         int i = lo; //left scan index
         int j = hi+1; //right scan index
         while (true) {
             // scan left
-            while (a[++i].compareTo(v) < 0) {
+            while (a[++i].compareTo(partitioningItem) < 0) {
                 if (i == hi) {
                     break;
                 }
             }
             // scan right
-            while (a[--j].compareTo(v) > 0) {
+            while (a[--j].compareTo(partitioningItem) > 0) {
                 if (j == lo) {
                     break;
                 }

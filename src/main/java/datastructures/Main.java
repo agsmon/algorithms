@@ -34,7 +34,8 @@ public class Main {
     }
 
     private static void tryQueue() {
-        LinkedListQueue<String> queue = new LinkedListQueue<>();
+       // LinkedListQueue<String> queue = new LinkedListQueue<>();
+        UnorderedArrayPriorityQueue<String> queue = new UnorderedArrayPriorityQueue();
         System.out.println("To add an item into queue enter it. To get an item enter \"get\". To stop enter \"stop\". Your input: ");
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
@@ -45,10 +46,10 @@ public class Main {
                 if (queue.isEmpty()) {
                     System.out.println("Queue is empty");
                 } else {
-                    System.out.println("The item is: " + queue.get());
+                    System.out.println("The item is: " + queue.getMax());
                 }
             } else {
-                queue.add(next);
+                queue.insert(next);
             }
             System.out.println("Your input: ");
         }

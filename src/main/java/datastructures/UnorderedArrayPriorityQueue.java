@@ -33,7 +33,7 @@ public class UnorderedArrayPriorityQueue<Key extends Comparable<Key>> {
                 maxIndex = i;
             }
         }
-        a[maxIndex] = a[--numberOfItems]; // switching the mqximum and the last, removing the last
+        a[maxIndex] = a[--numberOfItems]; // switching the maximum and the last, removing the last
         a[numberOfItems] = null;
         if (numberOfItems < a.length/4) {
             resize(a.length/2);

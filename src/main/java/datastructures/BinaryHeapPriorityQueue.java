@@ -40,11 +40,20 @@ public class BinaryHeapPriorityQueue<Key extends Comparable<Key>> {
 
     // move down the tree, comparing with child nodes and exchanging if child is bigger
     private void sink(int index) {
-        while (2*index <= numberOfItems && ((a[2*index].compareTo(a[index]) > 0) )) {
+        int j;
+        while (2*index <= numberOfItems) {
+            j = 2*index; // index of the nodes first child
+            if (j < numberOfItems && a[j].compareTo(a[j+1]) < 0) {
+                j++; // index of the nodes first child, if bigger then first
+            }
+            if (a[j].compareTo(a[index]) < 0) { // if parent is bigger, break
+                break;
+            }
+            // exchange parent and child
             Key temp = a[index];
-            a[index] = a[2*index];
-            a[2*index] = temp;
-            index = index*2;
+            a[index] = a[j];
+            a[j] = temp;
+            index = j; // move on
         }
     }
 
